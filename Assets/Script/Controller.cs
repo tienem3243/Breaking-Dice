@@ -11,6 +11,7 @@ public class Controller : MonoBehaviour
    [SerializeField] private float _moveSpeed = 20f;
     private float mMoveSpeed;
     [SerializeField] private float _DashSpeed = 20f;
+    [SerializeField] Warrior war;
     private float mDash;
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,5 @@ public class Controller : MonoBehaviour
         _animator.SetFloat("Speed", moveVec.sqrMagnitude);
     }
 
-    private void Update()
-    {
-    }
+  
 }

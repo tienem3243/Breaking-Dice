@@ -64,7 +64,6 @@ namespace Pathfinding {
 		/// </summary>
 		[HideInInspector]
 		public int[] tagPenalties = new int[32];
-
 		/// <summary>
 		/// Graphs that this Seeker can use.
 		/// This field determines which graphs will be considered when searching for the start and end nodes of a path.
@@ -100,7 +99,7 @@ namespace Pathfinding {
 		/// </summary>
 		[HideInInspector]
 		public GraphMask graphMask = GraphMask.everything;
-
+		
 		/// <summary>Used for serialization backwards compatibility</summary>
 		[UnityEngine.Serialization.FormerlySerializedAs("graphMask")]
 		int graphMaskCompatibility = -1;

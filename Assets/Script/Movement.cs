@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     //input click
     [SerializeField] Transform desPos;
     Vector2 movementClick;
+   
     private void Start()
     {
         
