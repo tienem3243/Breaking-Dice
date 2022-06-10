@@ -151,10 +151,10 @@ TextureImporter:
       name: wizard_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 78
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: wizard_1
       rect:
         serializedVersion: 2
-        x: 350
+        x: 428
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: wizard_2
       rect:
         serializedVersion: 2
-        x: 700
+        x: 778
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: wizard_3
       rect:
         serializedVersion: 2
-        x: 1050
+        x: 1128
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,10 +235,10 @@ TextureImporter:
       name: wizard_4
       rect:
         serializedVersion: 2
-        x: 1400
+        x: 1478
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: wizard_5
       rect:
         serializedVersion: 2
-        x: 1750
+        x: 1828
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,10 +277,10 @@ TextureImporter:
       name: wizard_6
       rect:
         serializedVersion: 2
-        x: 2100
+        x: 2178
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,10 +298,10 @@ TextureImporter:
       name: wizard_7
       rect:
         serializedVersion: 2
-        x: 2450
+        x: 2528
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: wizard_8
       rect:
         serializedVersion: 2
-        x: 2800
+        x: 2878
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: wizard_9
       rect:
         serializedVersion: 2
-        x: 3150
+        x: 3228
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 157
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: wizard_10
       rect:
         serializedVersion: 2
-        x: 3500
+        x: 3578
         y: 0
-        width: 350
-        height: 200
+        width: 210
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

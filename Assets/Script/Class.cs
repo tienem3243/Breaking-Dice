@@ -8,6 +8,7 @@ public class Class : MonoBehaviour
     [SerializeField] private Skill[] abilityList;
     [SerializeField] int hp;
     [SerializeField] int dame;
+    [SerializeField] int speed;
     [SerializeField] Item[] items;
 
     public string Classname { get => classname; set => classname = value; }
@@ -15,4 +16,5 @@ public class Class : MonoBehaviour
     public int Hp { get => hp; set => hp = value; }
     public int Dame { get => dame; set => dame = value; }
     public Item[] Items { get => items; set => items = value; }
+    public int Speed { get => speed; set => speed = value; }
 }

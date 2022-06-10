@@ -6,10 +6,10 @@ using UnityEngine.EventSystems;
 
 public class CardDisplay : MonoBehaviour
 {
-    [SerializeField] GameObject Char;
-    [SerializeField] Transform charStand;
-    [SerializeField] TextMesh cardName, atk, hp, ability1, ability2;
-    [SerializeField] Image diceCost1, diceCost2, itemSlotCount, IconOfClass;
+    [SerializeField] public GameObject Char;
+    [SerializeField] public Transform charStand;
+    [SerializeField] public TextMesh cardName, atk, hp,spd, ability1, ability2;
+    [SerializeField] public Image diceCost1, diceCost2, itemSlotCount, IconOfClass;
 
     Class character;
     private void Start()
@@ -29,6 +29,7 @@ public class CardDisplay : MonoBehaviour
         cardName.text = character.Classname;
         atk.text = character.Dame.ToString();
         hp.text = character.Hp.ToString();
+        spd.text = character.Speed.ToString();
         ability1.text = character.AbilityList[0].Name;
         ability2.text = character.AbilityList[1].Name;
         //set item slot
@@ -50,10 +51,10 @@ public class CardDisplay : MonoBehaviour
         switch (number)
         {
             case 0:
-                ability1.text = character.AbilityList[0].Descript;       
+                  
                 break;
             case 1:
-                ability2.text = character.AbilityList[1].Descript;
+              
                 break;
         }
         
