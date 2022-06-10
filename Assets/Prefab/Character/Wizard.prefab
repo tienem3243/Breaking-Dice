@@ -120,8 +120,8 @@ MonoBehaviour:
   abilityList:
   - {fileID: 11400000, guid: 879552bfeeb65d346b1f20ff1c1b9b3c, type: 2}
   - {fileID: 11400000, guid: 3839000be9c9e7e40844dc804d04056b, type: 2}
-  hp: 10
-  dame: 10
+  hp: 5
+  dame: 15
   items:
   - {fileID: 11400000, guid: 47fd9c069946973488c5c9eb0799f79f, type: 2}
   - {fileID: 11400000, guid: 47fd9c069946973488c5c9eb0799f79f, type: 2}
