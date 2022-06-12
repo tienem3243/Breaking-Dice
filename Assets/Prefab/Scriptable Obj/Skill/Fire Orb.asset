@@ -15,3 +15,5 @@ MonoBehaviour:
   diceCost: 3
   skillName: FireOrb
   descript: Cast a ball full fill of flame to enemy
+  field: 1
+  target: 0

@@ -6,19 +6,22 @@ using UnityEngine.EventSystems;
 
 public class CardDisplay : MonoBehaviour
 {
+    [SerializeField] public BattleSystem battleSystem;
     [SerializeField] public GameObject Char;
     [SerializeField] public Transform charStand;
     [SerializeField] public TextMesh cardName, atk, hp,spd, ability1, ability2;
+    [SerializeField] public int onboardSlot; 
     [SerializeField] public Image diceCost1, diceCost2, itemSlotCount, IconOfClass;
 
     Class character;
     private void Start()
     {
-        SetUpDefault();
+        InitCard();
+        battleSystem = FindObjectOfType<BattleSystem>();
         Instantiate(character.gameObject, charStand);
     }
    
-    public void SetUpDefault()
+    public void InitCard()
     {
         //set up sprite
         character = Char.GetComponent<Class>();
@@ -45,19 +48,16 @@ public class CardDisplay : MonoBehaviour
         }
         IconOfClass.sprite = charClass;
     }
-    public void DisplayAbilityDesc(int number)
+    public void AbilityUse(int slot)
     {
-        //may be can replace by list of ability but 2 is the skill slot limit so i do this
-        switch (number)
-        {
-            case 0:
-                  
-                break;
-            case 1:
-              
-                break;
-        }
-        
+        FieldEffect field= character.AbilityList[slot].Field;
+        TargetAble target = character.AbilityList[slot].Target;
+        battleSystem.AbilityUse(field, target,onboardSlot);
+
+    }
+    public void AbilityResetTarget()
+    {
+        battleSystem.ResetTargetField();
     }
 
 }
