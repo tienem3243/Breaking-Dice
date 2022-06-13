@@ -50,47 +50,47 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    public void AbilityUse(FieldEffect field, TargetAble target, int SlotOfOwner)
+    public void VisualFieldEffect(FieldEffect field, TargetAble target, int SlotOfOwner,Color color)
     {
         ResetTargetField();
         switch (target)
         {
             case TargetAble.enermy:
-                TargetHandle(field,EffectField2);
+                TargetHandle(field,EffectField2,color);
                 break;
             case TargetAble.player:
-                TargetHandle(field,EffectField1);
+                TargetHandle(field,EffectField1,color);
                 break;
             case TargetAble.all:
-                TargetHandle(field,EffectField1);
-                TargetHandle(field,EffectField2);
+                TargetHandle(field,EffectField1,color);
+                TargetHandle(field,EffectField2,color);
                 break;
             case TargetAble.self:
-                SetColorField(Color.green, EffectField1[SlotOfOwner], 1);
+                SetColorField(color, EffectField1[SlotOfOwner], 1);
                 break;
 
         }
 
     }
-    public void TargetHandle(FieldEffect field, Image[] EffectField)
+    public void TargetHandle(FieldEffect field, Image[] EffectField,Color color)
     {
 
         switch (field)
         {
             case FieldEffect.front:
                 //todo use new function shorter
-                SetColorField(Color.red, EffectField[0], 1f);
-                SetColorField(Color.red, EffectField[2], 1f);
+                SetColorField(color, EffectField[0], 1f);
+                SetColorField(color, EffectField[2], 1f);
                 break;
             case FieldEffect.back:
-                SetColorField(Color.red, EffectField[1], 1f);
-                SetColorField(Color.red, EffectField[3], 1f);
+                SetColorField(color, EffectField[1], 1f);
+                SetColorField(color, EffectField[3], 1f);
                 break;
             case FieldEffect.all:
-                SetColorField(Color.red, EffectField[0], 1f);
-                SetColorField(Color.red, EffectField[1], 1f);
-                SetColorField(Color.red, EffectField[2], 1f);
-                SetColorField(Color.red, EffectField[3], 1f);
+                SetColorField(color, EffectField[0], 1f);
+                SetColorField(color, EffectField[1], 1f);
+                SetColorField(color, EffectField[2], 1f);
+                SetColorField(color, EffectField[3], 1f);
                 break;
         }
     }

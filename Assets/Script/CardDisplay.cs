@@ -8,6 +8,7 @@ public class CardDisplay : MonoBehaviour
 {
     [SerializeField] public BattleSystem battleSystem;
     [SerializeField] public GameObject Char;
+    [SerializeField] public Image[] abilityField;
     [SerializeField] public Transform charStand;
     [SerializeField] public TextMesh cardName, atk, hp,spd, ability1, ability2;
     [SerializeField] public int onboardSlot; 
@@ -33,8 +34,10 @@ public class CardDisplay : MonoBehaviour
         atk.text = character.Dame.ToString();
         hp.text = character.Hp.ToString();
         spd.text = character.Speed.ToString();
+        //set up ability name
         ability1.text = character.AbilityList[0].Name;
         ability2.text = character.AbilityList[1].Name;
+       
         //set item slot
         if (character.Items.Length != 0)
         {
@@ -46,13 +49,48 @@ public class CardDisplay : MonoBehaviour
             diceCost1.sprite = costList[character.AbilityList[0].DiceCost];
             diceCost2.sprite = costList[character.AbilityList[1].DiceCost];
         }
+        //set icon class
         IconOfClass.sprite = charClass;
+        //set field color base on type of ability
+        for (int i = 0; i < character.AbilityList.Length; i++)
+        {
+            abilityField[i].color = SetFieldColor(character.AbilityList[i].AbilityType);
+        }
+
     }
-    public void AbilityUse(int slot)
+    //set color by ability type TODO
+    public static Color SetFieldColor(AbilityType type)
     {
-        FieldEffect field= character.AbilityList[slot].Field;
-        TargetAble target = character.AbilityList[slot].Target;
-        battleSystem.AbilityUse(field, target,onboardSlot);
+        Color color;
+        switch (type)
+        {
+            case AbilityType.atk:
+
+                if (ColorUtility.TryParseHtmlString("#c55050", out color))
+                    return color;
+                break;
+            case AbilityType.buff:
+                if (ColorUtility.TryParseHtmlString("#ed7934", out color))
+                    return color;
+                break;
+            case AbilityType.debuff:
+       
+                if (ColorUtility.TryParseHtmlString("#ae2ed2", out color))
+                    return color;
+                break;
+            case AbilityType.heal:
+                if (ColorUtility.TryParseHtmlString("#1dce49", out color))
+                    return color;
+                break;
+        }
+        return Color.white;
+    }
+    public void AbilityUse(int skillSlot)
+    {
+        FieldEffect field= character.AbilityList[skillSlot].Field;
+        TargetAble target = character.AbilityList[skillSlot].Target;
+        Color color = SetFieldColor(character.AbilityList[skillSlot].AbilityType);
+        battleSystem.VisualFieldEffect(field, target,onboardSlot,color);
 
     }
     public void AbilityResetTarget()

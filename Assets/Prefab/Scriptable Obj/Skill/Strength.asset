@@ -16,4 +16,5 @@ MonoBehaviour:
   skillName: Strength
   descript: Increase all stack by 1 to the end of combat. Renew turn
   field: 2
-  target: 1
+  target: 0
+  abilityType: 2

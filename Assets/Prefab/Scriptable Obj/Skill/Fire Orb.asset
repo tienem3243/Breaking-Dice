@@ -17,3 +17,4 @@ MonoBehaviour:
   descript: Cast a ball full fill of flame to enemy
   field: 1
   target: 0
+  abilityType: 3

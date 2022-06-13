@@ -15,3 +15,6 @@ MonoBehaviour:
   diceCost: 2
   skillName: Slash
   descript: Deal 1.5xAtk dame to target and stun it to last turn
+  field: 0
+  target: 0
+  abilityType: 3
