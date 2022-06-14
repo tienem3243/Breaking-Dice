@@ -13,7 +13,7 @@ public class CardDisplay : MonoBehaviour
     [SerializeField] public TextMesh cardName, atk, hp,spd, ability1, ability2;
     [SerializeField] public int onboardSlot; 
     [SerializeField] public Image diceCost1, diceCost2, itemSlotCount, IconOfClass;
-
+    [SerializeField] public GameObject ChosenEffect;
     Class character;
     private void Start()
     {
@@ -97,6 +97,10 @@ public class CardDisplay : MonoBehaviour
     {
         battleSystem.ResetTargetField();
     }
-
+    public void WasChosenEffect(bool enable)
+    {
+        ChosenEffect.SetActive(enable);
+    }
+    
 }
  
