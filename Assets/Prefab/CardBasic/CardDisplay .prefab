@@ -168,7 +168,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8125552508130337327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +203,9 @@ MonoBehaviour:
   abilityField:
   - {fileID: 8125552509249708481}
   - {fileID: 8125552508315361074}
+  diceCost:
+  - {fileID: 8125552509708235885}
+  - {fileID: 8125552508116188326}
   charStand: {fileID: 8125552508986410182}
   cardName: {fileID: 8125552509905353258}
   atk: {fileID: 8125552509057364623}
@@ -211,8 +214,6 @@ MonoBehaviour:
   ability1: {fileID: 8125552509638077175}
   ability2: {fileID: 8125552508564245675}
   onboardSlot: 0
-  diceCost1: {fileID: 8125552509708235885}
-  diceCost2: {fileID: 8125552508116188326}
   itemSlotCount: {fileID: 8125552509621084843}
   IconOfClass: {fileID: 8125552508542940564}
   ChosenEffect: {fileID: 4723931981647935203}
@@ -235,7 +236,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 8125552508130337326}
           m_TargetAssemblyTypeName: CardDisplay, Assembly-CSharp
-          m_MethodName: WasChosenEffect
+          m_MethodName: OnEnterMouse
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -251,7 +252,23 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 8125552508130337326}
           m_TargetAssemblyTypeName: CardDisplay, Assembly-CSharp
-          m_MethodName: WasChosenEffect
+          m_MethodName: OnEnterMouse
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8125552508130337326}
+          m_TargetAssemblyTypeName: CardDisplay, Assembly-CSharp
+          m_MethodName: OnEnterMouse
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -427,7 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1640,6 +1657,18 @@ MonoBehaviour:
         - m_Target: {fileID: 8125552508130337326}
           m_TargetAssemblyTypeName: CardDisplay, Assembly-CSharp
           m_MethodName: AbilityResetTarget
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8125552508130337326}
+          m_TargetAssemblyTypeName: CardDisplay, Assembly-CSharp
+          m_MethodName: OnChosen
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

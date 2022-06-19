@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Ice Orb
   m_EditorClassIdentifier: 
   diceCost: 5
+  targetCount: 2
   skillName: Ice Orb
   descript: Cast a ice orb to enemy
   field: 0

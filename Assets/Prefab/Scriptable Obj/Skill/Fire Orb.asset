@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fire Orb
   m_EditorClassIdentifier: 
   diceCost: 3
+  targetCount: 1
   skillName: FireOrb
   descript: Cast a ball full fill of flame to enemy
   field: 1

@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Human 
+public interface Race 
 {
     void hit(Moster m,int dame);
+    void hit(Race m, int dame);
 
 
     public void TakeDame(int dame);

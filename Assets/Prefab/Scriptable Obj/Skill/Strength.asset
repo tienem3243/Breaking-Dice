@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Strength
   m_EditorClassIdentifier: 
   diceCost: 1
+  targetCount: 1
   skillName: Strength
   descript: Increase all stack by 1 to the end of combat. Renew turn
   field: 2
-  target: 0
-  abilityType: 2
+  target: 3
+  abilityType: 0

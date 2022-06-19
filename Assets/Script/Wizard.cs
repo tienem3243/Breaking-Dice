@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wizard : Class, Human
+public class Wizard : CharacterClass, Race
 {
     [SerializeField] string Charname = "wizard";
     [SerializeField]int magicForce;
@@ -15,6 +15,12 @@ public class Wizard : Class, Human
         //adding dame
         dame += magicForce;
         m.hitBy(this,dame);
+    }
+    public void hit(Race m, int dame)
+    {
+        //adding dame
+        dame += magicForce;
+        m.TakeDame(dame);
     }
     public void TakeDame(int dame)
     {

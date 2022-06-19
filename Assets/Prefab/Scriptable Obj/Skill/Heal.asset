@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Heal
   m_EditorClassIdentifier: 
   diceCost: 1
+  targetCount: 1
   skillName: Heal
   descript: 'Heal 1 '
   field: 2
