@@ -17,13 +17,14 @@ public class CardDisplay : MonoBehaviour
     [SerializeField] public Image itemSlotCount, IconOfClass;
     [SerializeField] public GameObject ChosenEffect;
     CharacterClass character;
-    Race race;
+    ILivingEntity race;
     private void Start()
     {
         InitCard();
-        race = Char.GetComponent<Race>();
+       
         battleSystem = FindObjectOfType<BattleSystem>();
         Char = Instantiate(character.gameObject, charStand);
+        race = Char.GetComponent<ILivingEntity>();
     }
 
     [ContextMenu("InitCard")]
@@ -36,7 +37,7 @@ public class CardDisplay : MonoBehaviour
         Sprite charClass = Resources.Load<Sprite>("Sprites/Class/" + character.Classname);
         //set up stat
         cardName.text = character.Classname;
-        atk.text = character.Dame.ToString();
+        atk.text = character.Atk.ToString();
         hp.text = character.Hp.ToString();
         spd.text = character.Speed.ToString();
         //set up ability name
@@ -109,14 +110,6 @@ public class CardDisplay : MonoBehaviour
 
         ChosenEffect.SetActive(enable);
     }
-    public void OnChosen()
-    {
-
-        if (Char != null &&battleSystem != null) 
-        {
-            battleSystem.atkHandlerQueue.Enqueue(race);
-
-        }
-    }
+  
 
 }

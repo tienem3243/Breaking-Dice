@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Moster : MonoBehaviour,Monster
+public class Moster : MonoBehaviour,IMonster
 {
     [SerializeField]int hp;
     [SerializeField] int dame;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : CharacterClass, Race
+public class Warrior : CharacterClass, ILivingEntity
 {
     [SerializeField] int shield;
     //dame receiver form each type monster, or dame type
@@ -11,12 +11,12 @@ public class Warrior : CharacterClass, Race
         m.hitBy(this,dame);
        
      }
-    public void hit(Race m, int dame)
+    public void hit(ILivingEntity m, int dame)
     {
-        m.TakeDame(dame);
+        m.hitBy(dame);
     }
 
-    public void TakeDame(int dame)
+    public void hitBy(int dame)
     {
         int realdame = dame - shield;
         //descreesing dame by shield
@@ -33,5 +33,8 @@ public class Warrior : CharacterClass, Race
         return Hp;
     }
 
-   
+    public void hit(CharacterClass m, int dame)//just human race
+    {
+        m.Hp -= Atk;
+    }
 }

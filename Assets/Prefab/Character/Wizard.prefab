@@ -118,9 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   classname: Wizard
   abilityList:
-  - {fileID: 11400000, guid: 879552bfeeb65d346b1f20ff1c1b9b3c, type: 2}
-  - {fileID: 11400000, guid: a47329a0f72301444b8e95cf3266d5da, type: 2}
-  hp: 2
+  - {fileID: 0}
+  hp: 13
   dame: 15
   speed: 20
   items:
