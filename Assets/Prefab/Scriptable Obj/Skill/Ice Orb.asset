@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1fff17a7c0b64f46b270dd2d9cf9e5d, type: 3}
-  m_Name: Slash
+  m_Script: {fileID: 11500000, guid: bc9045c99d2bea049b67f3a14dad2741, type: 3}
+  m_Name: Ice Orb
   m_EditorClassIdentifier: 
-  diceCost: 1
-  targetCount: 1
-  skillName: Slash
-  descript: Deal 3 dame
+  diceCost: 5
+  targetCount: 2
+  skillName: Ice Orb
+  descript: Cast a ice orb to enemy
   field: 0
   target: 0
   abilityType: 3

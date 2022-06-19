@@ -15,24 +15,20 @@ public class BattleSystem : MonoBehaviour
     public Transform cardSpawn;
     public BattleState battleState;
     public GameObject screenBlocking;
-    public Queue<ILivingEntity> atkHandlerQueue;
+    public Queue<Race> atkHandlerQueue;
     private void Start()
     {
         battleState = BattleState.START;
-        atkHandlerQueue = new Queue<ILivingEntity>();
+        atkHandlerQueue = new Queue<Race>();
         StartCoroutine(ChangeBattleState(BattleState.START));
     }
-    
-    public void refesh()
+    private void Update()
     {
-        foreach (Transform tr in cardSpawn)
+        if (atkHandlerQueue.Count==2)
         {
-            tr.GetComponent<CardDisplay>().InitCard();
+            Debug.Log("handle");
+            atkHandlerQueue.Clear();
         }
-    }
-    public void addQueue(AbilityStat skill,ILivingEntity race)
-    {
-
     }
     /*State Machine*/
     public IEnumerator ChangeBattleState(BattleState state)

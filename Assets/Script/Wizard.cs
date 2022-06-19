@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wizard : CharacterClass, ILivingEntity
+public class Wizard : CharacterClass, Race
 {
     [SerializeField] string Charname = "wizard";
     [SerializeField]int magicForce;
@@ -10,21 +10,19 @@ public class Wizard : CharacterClass, ILivingEntity
 
     public string Charname1 { get => Charname; set => Charname = value; }
 
-    public void hit(ILivingEntity m, int realDame)//all race
+    public void hit(Moster m,int dame)
     {
         //adding dame
-        
-        realDame +=this.Atk+ magicForce;
-        m.hitBy(realDame);
-        Debug.Log(Charname + " deal bonus " + magicForce + " total: " +realDame);
+        dame += magicForce;
+        m.hitBy(this,dame);
     }
-
-    public void hit(CharacterClass m, int dame)//just human race
+    public void hit(Race m, int dame)
     {
-        m.Hp -= Atk;
+        //adding dame
+        dame += magicForce;
+        m.TakeDame(dame);
     }
-
-    public void hitBy(int dame)
+    public void TakeDame(int dame)
     {
        Hp -= dame;
     }

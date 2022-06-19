@@ -9,7 +9,7 @@ public class TestCase : MonoBehaviour
     [ContextMenu("test")]
     public void test()
     {
-        a.GetComponent<ILivingEntity>();
+        a.GetComponent<Race>();
         Debug.Log(a);
     }
 }
