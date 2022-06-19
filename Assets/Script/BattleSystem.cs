@@ -15,19 +15,31 @@ public class BattleSystem : MonoBehaviour
     public Transform cardSpawn;
     public BattleState battleState;
     public GameObject screenBlocking;
-    public Queue<Race> atkHandlerQueue;
+    public AtkQueue atkQueue;
     private void Start()
     {
         battleState = BattleState.START;
-        atkHandlerQueue = new Queue<Race>();
         StartCoroutine(ChangeBattleState(BattleState.START));
     }
-    private void Update()
+ 
+    public void atkQueueHandler(LivingEntity entity)
     {
-        if (atkHandlerQueue.Count==2)
+        Debug.Log(atkQueue.atkQueue.Count);
+        if (atkQueue.state == QueueState.full)
         {
-            Debug.Log("handle");
-            atkHandlerQueue.Clear();
+            
+            while (atkQueue.atkQueue.Count != 0)
+            {
+               entity.hit( atkQueue.atkQueue.Dequeue(),20);
+            }
+            refeshCard();
+        }
+    }
+    public void refeshCard()
+    {
+        foreach (Transform trans in cardSpawn)
+        {
+            trans.GetComponent<CardDisplay>().InitCard();
         }
     }
     /*State Machine*/
@@ -68,7 +80,10 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
     }
 
-
+    public void PlayerTurn()
+    {
+           
+    }
  
     /*Visual */
     public void PassButton()

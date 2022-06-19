@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+enum CharState { death, alive }
 public class CharacterClass : MonoBehaviour
 {
     [SerializeField] private string classname;
     [SerializeField] private Skill[] abilityList;
     [SerializeField] int hp, dame, speed;
     [SerializeField] Item[] items;
-   
+    [SerializeField] CharState charState = CharState.alive;
     public CharacterClass()
     {
     }

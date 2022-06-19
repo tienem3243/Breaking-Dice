@@ -596,6 +596,7 @@ MonoBehaviour:
   cardSpawn: {fileID: 879158798}
   battleState: 0
   screenBlocking: {fileID: 1532347551}
+  atkQueue: {fileID: 0}
 --- !u!4 &639381512
 Transform:
   m_ObjectHideFlags: 0
@@ -1933,9 +1934,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2066506292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f81998845249ae44b883e574dc9b078, type: 3}
+  m_Script: {fileID: 11500000, guid: b2749906b16d9784fac20e0ce6c58f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  maxSize: 2
 --- !u!4 &2066506294
 Transform:
   m_ObjectHideFlags: 0

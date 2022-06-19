@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Race 
+public interface LivingEntity 
 {
-    void hit(Moster m,int dame);
-    void hit(Race m, int dame);
+    void hit(Moster m,int dameBonus);
+    void hit(LivingEntity m, int dameBonus);
 
 
     public void TakeDame(int dame);

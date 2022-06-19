@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : CharacterClass, Race
+public class Warrior : CharacterClass, LivingEntity
 {
     [SerializeField] int shield;
     //dame receiver form each type monster, or dame type
     public void hit(Moster m,int dame)
     {
+        dame += this.Dame;
         m.hitBy(this,dame);
        
      }
-    public void hit(Race m, int dame)
+    public void hit(LivingEntity m, int dame)
     {
         m.TakeDame(dame);
     }

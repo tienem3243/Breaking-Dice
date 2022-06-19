@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceCost: 2
   targetCount: 1
+  power: 0
   skillName: Slash
   descript: Deal 1.5xAtk dame to target and stun it to last turn
   field: 0
