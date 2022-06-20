@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9045c99d2bea049b67f3a14dad2741, type: 3}
+  m_Script: {fileID: 11500000, guid: a684a4332f851a1468924d1dc8a484fe, type: 3}
   m_Name: Slash
   m_EditorClassIdentifier: 
   diceCost: 2
@@ -18,5 +18,5 @@ MonoBehaviour:
   skillName: Slash
   descript: Deal 1.5xAtk dame to target and stun it to last turn
   field: 0
-  target: 0
+  targetAble: 0
   abilityType: 3

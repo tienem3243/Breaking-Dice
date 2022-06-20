@@ -596,7 +596,7 @@ MonoBehaviour:
   cardSpawn: {fileID: 879158798}
   battleState: 0
   screenBlocking: {fileID: 1532347551}
-  atkQueue: {fileID: 0}
+  atkQueue: {fileID: 2066506293}
 --- !u!4 &639381512
 Transform:
   m_ObjectHideFlags: 0

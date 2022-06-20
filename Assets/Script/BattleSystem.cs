@@ -22,18 +22,31 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(ChangeBattleState(BattleState.START));
     }
  
-    public void atkQueueHandler(LivingEntity entity)
+    public void atkQueueHandler(LivingEntity owner,Skill skill)
     {
-        Debug.Log(atkQueue.atkQueue.Count);
-        if (atkQueue.state == QueueState.full)
+        //regist queue when not have owner
+        if (skill!=null)
         {
-            
-            while (atkQueue.atkQueue.Count != 0)
-            {
-               entity.hit( atkQueue.atkQueue.Dequeue(),20);
-            }
-            refeshCard();
+            atkQueue.QueueRegister(skill, owner);
         }
+        else
+        {
+            atkQueue.add2Queue(owner);
+            Debug.Log(atkQueue.atkQueue.Count);
+            if (atkQueue.state == QueueState.full)
+            {
+
+                while (atkQueue.atkQueue.Count != 0)
+                {
+                    //todo change type
+                    owner.hit(atkQueue.atkQueue.Dequeue(), 20);
+                }
+                refeshCard();
+                atkQueue.clearQueue();
+
+            }
+        }
+     
     }
     public void refeshCard()
     {

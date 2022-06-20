@@ -95,10 +95,11 @@ public class CardDisplay : MonoBehaviour
     public void AbilityUse(int skillSlot)
     {
         FieldEffect field = character.AbilityList[skillSlot].Field;
-        TargetAble target = character.AbilityList[skillSlot].Target;
+        TargetAble target = character.AbilityList[skillSlot].TargetAble;
         Color color = SetFieldColor(character.AbilityList[skillSlot].AbilityType);
         battleSystem.TargetAbleHandler(field, target, onboardSlot, color);
-
+        battleSystem.atkQueueHandler(entity, character.AbilityList[skillSlot]);
+      
     }
     public void AbilityResetTarget()
     {
@@ -113,8 +114,8 @@ public class CardDisplay : MonoBehaviour
     }
     public void OnChosen()
     {
-        battleSystem.atkQueue.add2Queue(entity);
-        battleSystem.atkQueueHandler(entity);
+       
+        battleSystem.atkQueueHandler(entity,null);
     }
 
 }
